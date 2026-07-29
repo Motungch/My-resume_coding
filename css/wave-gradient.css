@@ -1,0 +1,67 @@
+/* 外層容器：用來裁切掉模糊（blur）與位移溢出的邊緣 */
+.wave-container {
+    width: 100%;
+    height: 710px;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* 第一層主漸層 */
+.wave-bg {
+    position: absolute;
+    /* 為了讓動畫有移動空間，把背景放大並往上左偏移 */
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+
+    /* 根據截圖參數：漸層方向 195° */
+    background-image: repeating-linear-gradient(
+        195deg,
+        #1e3c72 0%,      /* 藍 */
+        #2a5298 15%,     /* 藍 */
+        #20b2aa 30%,     /* 綠 */
+        #87cefa 45%,     /* 淺藍 */
+        #1e3c72 60%      /* 繞回深藍 */
+    );
+
+    /* 根據截圖參數：高度 33% */
+    background-size: 100% 33%;
+
+    /* 根據截圖參數：blur(44px) */
+    filter: blur(44px);
+
+    /* 動畫時長 13.3s */
+    animation: wave-drift 13.3s infinite alternate ease-in-out;
+}
+
+/* 第二層漸層 (使用虛擬元素)，根據參數：Blend opacity 0.54 */
+.wave-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        195deg,
+        #87cefa 0%,
+        #20b2aa 15%,
+        #2a5298 30%,
+        #1e3c72 45%,
+        #87cefa 60%
+    );
+    background-size: 100% 33%;
+    opacity: 0.54; 
+    mix-blend-mode: overlay;
+    animation: wave-drift-reverse 15s infinite alternate ease-in-out;
+}
+
+/* 根據截圖參數：translate 最大 18% / 12% */
+@keyframes wave-drift {
+    0% { transform: translate(0%, 0%); }
+    100% { transform: translate(18%, 12%); }
+}
+
+@keyframes wave-drift-reverse {
+    0% { transform: translate(18%, 12%); }
+    100% { transform: translate(0%, 0%); }
+}

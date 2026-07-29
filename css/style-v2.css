@@ -1,0 +1,1151 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 電腦、平板上應用的樣式 */
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  font-size: 16px;
+}
+/* 電腦版 Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+footer{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.logo-and-nav-and-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(230, 230, 230, 60%);
+  border-radius: 999px;
+  border: white solid 1px;
+  backdrop-filter: blur(10px);
+}
+.logo img {
+  display: flex;
+  width: 52px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.nav-and-btn {
+  display: flex;
+  gap: 32px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.primary-btn {
+  background-color: #1e60f1;
+  width: 133px;
+  height: 52px;
+  border-radius: 999px;
+  padding: 12px 32px;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+.primary-btn:hover {
+  background-color: #174bde;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.primary-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+.primary-nav a {
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.primary-nav a:hover {
+  color: #1e60f1;
+  transition: all 0.3s;
+}
+/* 電腦版 Banner */
+section {
+  padding: 60px 0px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  max-width: 1440px;
+  margin: auto;
+  justify-content: space-between;
+}
+#Banner {
+  width: 100%;
+  /* height: 600px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 290px 48px 200px 48px;
+}
+/* Banner Animation */
+.slogan {
+  position: relative;
+  z-index: 3;
+}
+.slogan h1 {
+  font-size: 48px;
+  text-shadow: none;
+  width: 663px;
+}
+.circle1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -10%;
+  left: 5%;
+  border-radius: 50%;
+  background-color: #5ba4ff;
+  filter: blur(40px);
+  z-index: -1;
+  animation: move 10s linear infinite;
+}
+.circle2 {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 20%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #5cf68f;
+  animation: move2 3s linear infinite;
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -25%;
+  left: -40%;
+  border-left: 120px solid transparent;
+  border-right: 240px solid transparent;
+  border-bottom: 300px solid #bddaff;
+  filter: blur(5px);
+  position: relative;
+  transform: rotate(30deg);
+  animation: spin 10s ease infinite;
+}
+@keyframes move {
+  0% {
+    left: -10%;
+    top: 5%;
+  }
+  50% {
+    left: 60%;
+    top: 0%;
+  }
+  100% {
+    left: 100%;
+    top: -20%;
+  }
+}
+@keyframes move2 {
+  0% {
+    margin-top: 20%;
+    margin-left: 40%;
+  }
+  50% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  70% {
+    margin-top: 15%;
+    margin-left: 40%;
+  }
+  100% {
+    margin-top: 20%;
+    margin-left: 40%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(170deg);
+  }
+}
+@keyframes squareToCircle {
+  0% {
+    border-radius: 0 0 0 0;
+    background: coral;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: darksalmon;
+    transform: rotate(45deg);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: indianred;
+    transform: rotate(90deg);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform: rotate(135deg);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background: darksalmon;
+    transform: rotate(180deg);
+  }
+}
+/* 電腦版 About */
+#About .container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  z-index: 2;
+  padding: auto;
+}
+
+.main-pic {
+  width: 340px;
+  height: 460px;
+}
+
+.main-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: -15px 15px 0px #bddaff;
+  border-radius: 24px;
+  border: none;
+  transform: rotate(-3deg);
+  overflow: hidden;
+}
+
+#About .description {
+  width: 50%;
+  padding: 30px;
+}
+
+h2 {
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+.description h3 {
+  padding: 20px 0;
+  font-size: 1.5rem;
+}
+
+.description p {
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+.tablinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: left;
+}
+
+.tablinks li {
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+.tablinks li a {
+  display: block;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.tablinks li a:hover {
+  background-color: #ddd;
+}
+
+.tablinks li a.active {
+  background-color: #e6a9f3;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.profile,
+.education,
+.skills {
+  margin-top: 20px;
+}
+
+/* 先設定list、li與skill name樣式 */
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-list li {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: baseline;
+}
+
+.skill-name {
+  font-weight: bold;
+  display: inline-block;
+  width: 80px;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+/* 設定bar的外層樣式 */
+.skill-bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  width: 250px;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 設定bar的內層樣式 */
+.skill-level {
+  background-color: #4caf50;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 設定各項目的顏色與動畫 */
+.skill-html {
+  animation: progress-html 2s ease-in-out;
+  background: linear-gradient(to right, #5ba4ff, #1e60f1);
+  width: 100%;
+}
+
+.skill-css {
+  animation: progress-css 2s ease-in-out;
+  background: linear-gradient(to right, #5ba4ff, #1e60f1);
+  width: 85%;
+}
+
+.skill-js {
+  animation: progress-js 2s ease-in-out;
+  background: linear-gradient(to right, #5ba4ff, #1e60f1);
+  width: 75%;
+}
+
+.skill-php {
+  animation: progress-php 2s ease-in-out;
+  background: linear-gradient(to right, #5ba4ff, #1e60f1);
+  width: 40%;
+}
+
+.skill-mysql {
+  animation: progress-mysql 2s ease-in-out;
+  background: linear-gradient(to right, #5ba4ff, #1e60f1);
+  width: 40%;
+}
+/* skill Animation */
+@keyframes progress-html {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes progress-css {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes progress-js {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes progress-php {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes progress-mysql {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+/* Experience */
+#Work-experience {
+  margin-top: 50px;
+  background-color: #f5f5f5;
+}
+
+.work-experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-experience-list li {
+  display: flex;
+  margin: 30px 0;
+  padding: 0px 0 20px 0;
+  align-items: center;
+  align-content: baseline;
+  border-bottom: 1px solid #ddd;
+}
+
+.work-period {
+  width: 150px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 30px;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: visible;
+  border-radius: 100%;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Portfolio (保留原本的 css 不刪除) */
+#Portfolio {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#Portfolio h2 {
+  font-size: 36px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+#Portfolio .container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+.card:nth-child(3) {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.card:nth-child(8) {
+  grid-area: 2 / 4 / 2 / 6;
+}
+.card:nth-child(6) {
+  grid-area: 2 / 2 / 4 / 4;
+  height: 370px;
+}
+.side img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.back {
+  display: flex;
+  background: #c1a27a;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+.card:hover .side {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+/* 原本寫在 style.css 最下方的 Media Query，這裡保留原樣 */
+@media screen and (max-width: 500px) {
+  .menu-icon {
+    display: flex;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  nav,
+  li,
+  .primary-nav a {
+    width: 100%;
+  }
+  .primary-nav {
+    flex-wrap: wrap;
+  }
+  .container {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  .photo,
+  .description {
+    width: 100%;
+  }
+  .photo-list li {
+    width: 48%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ==========================================================================
+   【Part 2】 原本的 works.css 
+   ========================================================================== */
+section {
+  padding: 100px 0px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  max-width: 1440px;
+  margin: auto;
+  justify-content: space-between;
+}
+.text-center {
+  text-align: center;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+.section-subtitle {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+input[type="radio"][name="device-tab"] {
+  display: none;
+}
+.tabs-container {
+  display: inline-flex;
+  background-color: rgba(239, 246, 255, 0.8);
+  padding: 0.375rem;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #dbeafe;
+}
+.tab-label {
+  position: relative;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.tab-label:hover {
+  color: #3b82f6;
+}
+.tab-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#tab-desktop-input:checked
+  ~ .container
+  .tabs-wrapper
+  .tab-label[for="tab-desktop-input"],
+#tab-mobile-input:checked
+  ~ .container
+  .tabs-wrapper
+  .tab-label[for="tab-mobile-input"] {
+  color: #2563eb;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #3b82f6;
+}
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .content-layout {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+.mockup-col {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+@media (min-width: 1024px) {
+  .mockup-col {
+    width: 60%;
+    padding: 2.5rem 0;
+  }
+}
+.mockup-interactive-area {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  cursor: none;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+.cursor-inner {
+  width: 130px;
+  height: 130px;
+  background-color: rgba(30, 96, 241, 60%);
+  color: white;
+  border-radius: 50%;
+  border: white 1px solid;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.6);
+}
+.custom-cursor.is-active .cursor-inner {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.mockup-wrapper {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+.mockup-interactive-area {
+  min-height: 400px;
+  aspect-ratio: 16/10;
+}
+@media (max-width: 768px) {
+  .mockup-interactive-area {
+    min-height: 300px;
+  }
+}
+#tab-desktop-input:checked
+  ~ .container
+  .mockup-interactive-area
+  .desktop-mockup {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+#tab-mobile-input:checked ~ .container .mockup-interactive-area .mobile-mockup {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+.laptop-frame {
+  width: 100%;
+  background: #222;
+  border-radius: 20px 20px 0 0;
+  padding: 2% 2% 3% 2%;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.laptop-base {
+  background: linear-gradient(to right, #9ca3af, #e5e7eb, #9ca3af);
+  height: 1.2vw;
+  min-height: 12px;
+  max-height: 20px;
+  border-radius: 0 0 16px 16px;
+  position: relative;
+  width: 114%;
+  left: -7%;
+  box-shadow:
+    inset 0 -3px 5px rgba(0, 0, 0, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.laptop-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: 50%;
+  background: #d1d5db;
+  border-radius: 0 0 10px 10px;
+}
+.screen-content {
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.aspect-desktop {
+  aspect-ratio: 16 / 10;
+}
+.phone-frame {
+  background: #222;
+  border-radius: 36px;
+  padding: 10px;
+  position: relative;
+  width: 220px;
+  margin: 0 auto;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 2px #444;
+}
+.phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 20px;
+  background: #000;
+  border-radius: 0 0 12px 12px;
+  z-index: 10;
+}
+.phone-frame .screen-content {
+  border-radius: 26px;
+}
+.aspect-mobile {
+  aspect-ratio: 9 / 19.5;
+}
+img.mockup-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.text-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .text-col {
+    width: 40%;
+    margin-top: 0;
+    padding-left: 3rem;
+  }
+}
+.info-card {
+  max-width: 28rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  margin-bottom: 1.5rem;
+  background-color: rgba(239, 246, 255, 0.5);
+}
+.project-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .project-title {
+    font-size: 2.25rem;
+  }
+}
+.project-desc {
+  color: #4b5563;
+  line-height: 1.625;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+.project-meta {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   【Part 3】 原本的 contact.css 
+   ========================================================================== */
+#Contact {
+  position: relative;
+  background: linear-gradient(-45deg, #1e60f1 0%, #3580fc 30%, #5cf68f 100%);
+  background-size: 200% 200%;
+  animation: gradient-wave-h 8s linear alternate infinite;
+  overflow: hidden;
+}
+@keyframes gradient-wave-h {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#Contact h2 {
+  font-size: 36px;
+  color: white;
+}
+#Contact h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 16px;
+}
+#Contact .container {
+  flex-wrap: wrap;
+}
+.info {
+  font-size: 16px;
+  list-style: none;
+  color: white;
+  margin-bottom: 16px;
+}
+.info i {
+  font-size: 20px;
+}
+.info li {
+  margin-bottom: 16px;
+}
+.right-box,
+.left-box {
+  width: 100%;
+}
+form {
+  background-color: white;
+  border-radius: 40px;
+  padding: 32px 40px;
+}
+.form-group {
+  margin-bottom: 24px;
+}
+#contact-form label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+}
+input {
+  background-color: #f5f5f5;
+  border: 1px solid #d4d4d4;
+  border-radius: 40px;
+  width: 100%;
+  height: 40px;
+  padding: 16px;
+  font-size: 16px;
+  display: block;
+}
+textarea {
+  background-color: #f5f5f5;
+  border: 1px solid #d4d4d4;
+  border-radius: 20px;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  display: block;
+}
+button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 40px;
+  background-color: #1e60f1;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+button[type="submit"]:hover {
+  background-color: #174bde;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 769px) {
+  #Contact .container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 769px) {
+  #Contact .container {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ==========================================================================
+   【Part 4】 全新 RWD 整合覆蓋樣式 (style-v2 核心)
+   目的：向下覆寫舊有代碼的衝突，統一斷點邏輯，完美適配平板與手機
+   ========================================================================== */
+
+/* ----- 平板與手機版斷點 (小於 1024px) ----- */
+@media (max-width: 1023px) {
+  /* --- 1. Header 導覽列 --- */
+  .logo-and-nav-and-btn {
+    position: relative; /* 為了讓彈出選單依附此區塊定位 */
+  }
+  .primary-btn {
+    display: none !important; /* 隱藏按鈕 */
+  }
+  .nav-and-btn {
+    gap: 0;
+  }
+  /* 預設隱藏導覽列，設定下拉選單樣式 */
+  .nav-and-btn nav {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 24px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    z-index: 1000;
+  }
+  /* 當外層被 JS 加上 .nav-open 時顯示選單 */
+  .logo-and-nav-and-btn.nav-open .nav-and-btn nav {
+    display: flex;
+  }
+  .primary-nav {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .primary-nav a {
+    padding: 8px 0; /* 增加點擊範圍 */
+  }
+  .menu-icon {
+    display: flex !important; /* 強制顯示漢堡選單 */
+    cursor: pointer;
+    margin-right: 16px;
+  }
+
+  /* --- 2. Banner 區塊 --- */
+  #Banner {
+    padding: 160px 24px 100px 24px;
+  }
+  .slogan h1 {
+    width: 100%; /* 取消原本寫死的 663px 寬度 */
+    font-size: 36px;
+    line-height: 1.4;
+  }
+
+  /* --- 3. About 區塊 --- */
+  #About .container {
+    flex-direction: column; /* 改為垂直排列 */
+    align-items: center;
+  }
+  .main-pic {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    aspect-ratio: 34 / 46;
+    margin-bottom: 40px; /* 與下方文字增加間距 */
+  }
+  #About .description {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .skill-bar {
+    width: 100%; /* 技能條寬度彈性化 */
+    max-width: 350px;
+  }
+
+  /* --- 4. Work Experience 區塊 --- */
+  .work-experience-list li {
+    flex-wrap: wrap; /* 允許換行 */
+  }
+  .work-period {
+    width: 100%; /* 日期獨立佔一行 */
+    margin-bottom: 12px;
+  }
+
+  /* --- 5. Contact 區塊 (覆寫原本的 769px 衝突) --- */
+  #Contact .container {
+    flex-direction: column !important; /* 強制垂直排列 */
+    flex-wrap: nowrap !important;
+  }
+  .left-box,
+  .right-box {
+    width: 100%;
+  }
+  .left-box {
+    margin-bottom: 20px; /* 與表單增加間距 */
+  }
+}
+
+/* ----- 純手機版斷點 (小於 768px) ----- */
+@media (max-width: 767px) {
+  .container {
+    width: 90%; /* 增加手機版時的容器佔用比例 */
+  }
+  .slogan h1 {
+    font-size: 28px;
+  }
+  /* 縮小背景動畫裝飾，避免擋住文字 */
+  .circle1,
+  .circle2 {
+    transform: scale(0.6);
+  }
+  .triangle {
+    display: none; /* 手機版空間過小，直接隱藏過大的三角形 */
+  }
+  .main-pic {
+    width: 80%;
+  }
+  .skill-name {
+    width: 100px;
+    font-size: 16px;
+  }
+  .company-logo {
+    margin-bottom: 12px; /* 調整經歷的 logo 間隔 */
+  }
+}
