@@ -352,7 +352,7 @@ h2 {
 /* 設定bar的外層樣式 */
 .skill-bar {
   background-color: #ddd;
-  height: 20px;
+  height: 24px;
   border-radius: 20px;
   display: inline-block;
   width: 250px;
@@ -385,22 +385,22 @@ h2 {
 .skill-css {
   animation: progress-css 2s ease-in-out;
   background: linear-gradient(to right, #5ba4ff, #1e60f1);
-  width: 85%;
+  width: 80%;
 }
 .skill-js {
   animation: progress-js 2s ease-in-out;
   background: linear-gradient(to right, #5ba4ff, #1e60f1);
-  width: 75%;
+  width: 80%;
 }
 .skill-php {
   animation: progress-php 2s ease-in-out;
   background: linear-gradient(to right, #5ba4ff, #1e60f1);
-  width: 40%;
+  width: 50%;
 }
 .skill-mysql {
   animation: progress-mysql 2s ease-in-out;
   background: linear-gradient(to right, #5ba4ff, #1e60f1);
-  width: 40%;
+  width: 50%;
 }
 /* skill Animation */
 @keyframes progress-html {
