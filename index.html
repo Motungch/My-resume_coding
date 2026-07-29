@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/works.css"> -->
-    <link rel="stylesheet" href="css/style-v3.css">
+    <link rel="stylesheet" href="css/style-v3.css" />
   </head>
 
   <body>
@@ -40,7 +40,7 @@
       </header>
 
       <!-- Emmet: section#About>.container>.photo{Photo}+.description{Description} -->
-<!-- Banner 區塊 -->
+      <!-- Banner 區塊 -->
       <section id="Banner">
         <div class="slogan">
           <h5>－ Morris Chung</h5>
@@ -53,7 +53,7 @@
         <div class="circle2"></div>
         <div class="triangle"></div>
       </section>
-<!-- About 區塊 -->
+      <!-- About 區塊 -->
       <section id="About">
         <div class="container">
           <div class="main-pic">
@@ -106,123 +106,141 @@
           </div>
         </div>
       </section>
-<!-- 工作經歷區塊 -->
+      <!-- 工作經歷區塊 -->
       <section id="Work-experience">
         <div class="container">
-            <h2>工作經歷</h2>
-            <ul class="work-experience-list">
-                <li>
-                    <div class="work-period">2025 - Present</div>
-                    <div class="company-logo"><img src="imgs/images.png" alt="Google"></div>
-                    <div class="job-title">UI/UX Designer</div>
-                </li>
-                <li>
-                    <div class="work-period">2024 - 2025</div>
-                    <div class="company-logo"><img src="imgs/logo-2022-circle.png" alt="Apple"></div>
-                    <div class="job-title">UI/UX Designer</div>
-                </li>
-            </ul>
+          <h2>工作經歷</h2>
+          <ul class="work-experience-list">
+            <li>
+              <div class="work-period">2025 - Present</div>
+              <div class="company-logo">
+                <img src="imgs/images.png" alt="Google" />
+              </div>
+              <div class="job-title">UI/UX Designer</div>
+            </li>
+            <li>
+              <div class="work-period">2024 - 2025</div>
+              <div class="company-logo">
+                <img src="imgs/logo-2022-circle.png" alt="Apple" />
+              </div>
+              <div class="job-title">UI/UX Designer</div>
+            </li>
+          </ul>
         </div>
-    </section>
-    <!-- Works 區塊 -->
-    <section id="Works">
+      </section>
+      <!-- Works 區塊 -->
+      <section id="Works">
         <!-- CSS State Control via Radio Buttons -->
-        <input type="radio" id="tab-desktop-input" name="device-tab" checked>
-        <input type="radio" id="tab-mobile-input" name="device-tab">
+        <input type="radio" id="tab-desktop-input" name="device-tab" checked />
+        <input type="radio" id="tab-mobile-input" name="device-tab" />
 
-        <div class="container" style="flex-direction: column; align-items: center;">
-            
-            <!-- Header & Tabs -->
-            <div class="text-center mb-12" style="width: 100%;">
-                <h2 class="section-title mb-3">Featured Project</h2>
-                
-                <!-- Tabs Wrapper -->
-                <div class="tabs-wrapper" style="margin-top: 2rem;">
-                    <div class="tabs-container">
-                        <label for="tab-desktop-input" class="tab-label">
-                            <svg class="tab-icon" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </label>
-                        <label for="tab-mobile-input" class="tab-label">
-                            <svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        </label>
+        <div
+          class="container"
+          style="flex-direction: column; align-items: center"
+        >
+          <!-- Header & Tabs -->
+          <div class="text-center mb-12" style="width: 100%">
+            <h2 class="section-title mb-3">Featured Project</h2>
+
+            <!-- Tabs Wrapper -->
+            <div class="tabs-wrapper" style="margin-top: 2rem">
+              <div class="tabs-container">
+                <label for="tab-desktop-input" class="tab-label">
+                  <svg class="tab-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </label>
+                <label for="tab-mobile-input" class="tab-label">
+                  <svg class="tab-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-layout">
+            <!-- Left Column: Device Mockups -->
+            <div class="mockup-col">
+              <div class="mockup-interactive-area">
+                <!-- 移除了原本的 .hover-view-btn -->
+
+                <!-- Desktop Mockup -->
+                <div class="mockup-wrapper desktop-mockup">
+                  <div class="laptop-frame">
+                    <div class="screen-content aspect-desktop">
+                      <img
+                        src="imgs/Web_MSF.png"
+                        alt="Desktop Project UI"
+                        class="mockup-img"
+                      />
                     </div>
+                  </div>
+                  <div class="laptop-base">
+                    <div class="laptop-notch"></div>
+                  </div>
                 </div>
+
+                <!-- Mobile Mockup -->
+                <div class="mockup-wrapper mobile-mockup">
+                  <div class="phone-frame aspect-mobile">
+                    <div class="phone-notch"></div>
+                    <div class="screen-content">
+                      <img
+                        src="imgs/m_MSF.png"
+                        alt="Mobile Project UI"
+                        class="mockup-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="content-layout">
-                
-                <!-- Left Column: Device Mockups -->
-                <div class="mockup-col">
-                    <div class="mockup-interactive-area">
-                        
-                        <!-- 移除了原本的 .hover-view-btn -->
-                        
-                        <!-- Desktop Mockup -->
-                        <div class="mockup-wrapper desktop-mockup">
-                            <div class="laptop-frame">
-                                <div class="screen-content aspect-desktop">
-                                    <img src="imgs/Web_MSF.png" alt="Desktop Project UI" class="mockup-img">
-                                </div>
-                            </div>
-                            <div class="laptop-base">
-                                <div class="laptop-notch"></div>
-                            </div>
-                        </div>
+            <div class="text-col">
+              <div class="info-card">
+                <span class="tag">Enterprise website</span>
 
-                        <!-- Mobile Mockup -->
-                        <div class="mockup-wrapper mobile-mockup">
-                            <div class="phone-frame aspect-mobile">
-                                <div class="phone-notch"></div>
-                                <div class="screen-content">
-                                    <img src="imgs/m_MSF.png" alt="Mobile Project UI" class="mockup-img">
-                                </div>
-                            </div>
-                        </div>
+                <h3 class="project-title">MSF Taiwan – Website Redesign</h3>
 
-                    </div>
-                </div>
-
-                <div class="text-col">
-                    <div class="info-card">
-                        <span class="tag">Enterprise website</span>
-                        
-                        <h3 class="project-title">
-                            MSF Taiwan – Website Redesign
-                        </h3>
-                        
-                        <p class="project-desc">
-                            Sitemap, User Journey Map, Wireframe, UI Design, Prototype
-                        </p>
-                    </div>
-                </div>
-
+                <p class="project-desc">
+                  Sitemap, User Journey Map, Wireframe, UI Design, Prototype
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- 在 body 結束前加入 Custom Cursor 的 HTML 結構與必要的 JS 腳本 -->
-    <div class="custom-cursor" id="customCursor">
-        <div class="cursor-inner">View<br>Project</div>
-    </div>
+      <!-- 在 body 結束前加入 Custom Cursor 的 HTML 結構與必要的 JS 腳本 -->
+      <div class="custom-cursor" id="customCursor">
+        <div class="cursor-inner">View<br />Project</div>
+      </div>
 
-    <script>
-        const cursor = document.getElementById('customCursor');
-        const interactiveArea = document.querySelector('.mockup-interactive-area');
+      <script>
+        const cursor = document.getElementById("customCursor");
+        const interactiveArea = document.querySelector(
+          ".mockup-interactive-area",
+        );
 
-        document.addEventListener('mousemove', (e) => {
-            // 讓外層容器瞬間跟隨滑鼠，不帶 transition
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+        document.addEventListener("mousemove", (e) => {
+          // 讓外層容器瞬間跟隨滑鼠，不帶 transition
+          cursor.style.left = e.clientX + "px";
+          cursor.style.top = e.clientY + "px";
         });
 
-        interactiveArea.addEventListener('mouseenter', () => {
-            cursor.classList.add('is-active');
+        interactiveArea.addEventListener("mouseenter", () => {
+          cursor.classList.add("is-active");
         });
 
-        interactiveArea.addEventListener('mouseleave', () => {
-            cursor.classList.remove('is-active');
+        interactiveArea.addEventListener("mouseleave", () => {
+          cursor.classList.remove("is-active");
         });
-    </script>
+      </script>
 
       <!-- Contact -->
       <!-- <div class="wave-container">
